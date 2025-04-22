@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "ExpoRadarChartModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.radarchart.ExpoRadarChartModule"
+    ]
+  }
+}
