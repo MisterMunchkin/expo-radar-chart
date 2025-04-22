@@ -1,5 +1,7 @@
 module.exports = {
   root: true,
-  extends: ['universe/native', 'universe/web'],
+  extends: [
+    'plugin:prettier/recommended', // This sets prettier/prettier as a rule
+  ],
   ignorePatterns: ['build'],
 };

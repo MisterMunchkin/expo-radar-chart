@@ -1,31 +1,12 @@
 import { useEvent } from 'expo';
-import ExpoRadarChart, { ExpoRadarChartView } from 'expo-radar-chart';
+import { ExpoRadarChartView } from 'expo-radar-chart';
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 export default function App() {
-  const onChangePayload = useEvent(ExpoRadarChart, 'onChange');
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Module API Example</Text>
-        <Group name="Constants">
-          <Text>{ExpoRadarChart.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{ExpoRadarChart.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await ExpoRadarChart.setValueAsync('Hello from JS!');
-            }}
-          />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
         <Group name="Views">
           <ExpoRadarChartView
             url="https://www.example.com"
